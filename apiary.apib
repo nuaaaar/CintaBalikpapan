@@ -31,26 +31,11 @@ HOST: http://localhost:8000/api/
                 }
             ]
         }
-    
-## List Kategori Pariwisata [GET /pariwisata/kategori]
 
-+ Response 200 (application/json)
-        
-        {
-            "kategoris": [
-                {
-                    "id": 1,
-                    "nama": "Pantai",
-                    "created_at": "2018-10-23 18:46:03",
-                    "updated_at": "2018-10-23 18:46:03"
-                }
-            ]
-        }
-        
 ## Detail Pariwisata [GET /pariwisata/{id}]
 
 + Response 200 (application/json)
-        
+
         {
             "pariwisata": {
                 "id": 10001,
@@ -88,13 +73,72 @@ HOST: http://localhost:8000/api/
                 ]
             }
         }
-        
+    
+## List Kategori Pariwisata [GET /pariwisata/kategori]
+
++ Response 200 (application/json)
+
+        {
+            "kategoris": [
+                {
+                    "id": 1,
+                    "nama": "Pantai",
+                    "created_at": "2018-10-23 18:46:03",
+                    "updated_at": "2018-10-23 18:46:03"
+                }
+            ]
+        }
+
+## List Pariwisata Berdasarkan Kategori [GET /pariwisata/kategori/{id}]
+
++ Response 200 (application/json)
+
+        {
+            "kategori": {
+                "id": 1,
+                "nama": "Pantai",
+                "created_at": "2018-10-23 18:46:03",
+                "updated_at": "2018-10-23 18:46:03",
+                "pariwisatas": [
+                    {
+                        "id": 10001,
+                        "kategori_id": 1,
+                        "nama": "Pantai Wisata Lamaru, Jl. Mulawarman, Lamaru, Kota Balikpapan, Kalimantan Timur",
+                        "informasi": null,
+                        "lokasi": "Jl. Mulawarman, Lamaru, Balikpapan Tim., Kota Balikpapan, Kalimantan Timur 76118",
+                        "telp": "+6281347201592",
+                        "url_web": "",
+                        "waktu": "08:00 - 17:30",
+                        "created_at": "2018-10-23 18:47:32",
+                        "updated_at": "2018-10-23 18:47:32",
+                        "map": {
+                            "id": 2,
+                            "data_id": "10001",
+                            "image": "/storage/map/VMJBxLlabYEOt3yomvhakkllcQxRkXJ9C3xCqpdj.png",
+                            "url": "https://www.google.co.id/maps/place/Pantai+Wisata+Lamaru/@-1.193233,117.0026993,17z/data=!3m1!4b1!4m5!3m4!1s0x2df15039a348564f:0xe4c83485b2c3167e!8m2!3d-1.193233!4d117.004888",
+                            "created_at": "2018-10-23 18:47:33",
+                            "updated_at": "2018-10-23 18:47:33"
+                        },
+                        "galeri": [
+                            {
+                                "id": 2,
+                                "data_id": 10001,
+                                "gambar": "/storage/galeri/7WASHFHj5MDvxkc9pikVwXjU4kwTZo8oLv9fAnBo.jpeg",
+                                "created_at": "2018-10-31 01:14:58",
+                                "updated_at": "2018-10-31 01:14:58"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    
 # Group Perhotelan
 
 ## List Perhotelan [GET /perhotelan]
 
 + Response 200 (application/json)       
-        
+
         {
             "perhotelans": [
                 {
