@@ -1,1 +1,118 @@
+FORMAT: 1A
+HOST: http://localhost:8000/api/
 
+# Cinta Balikpapan
+
+# Group Pariwisata 
+
+## List Pariwisata [GET /pariwisata]
+
++ Response 200 (application/json)
+
+        {
+            "pariwisatas": [
+                {
+                    "id": 10001,
+                    "kategori_id": 1,
+                    "nama": "Pantai Wisata Lamaru, Jl. Mulawarman, Lamaru, Kota Balikpapan, Kalimantan Timur",
+                    "informasi": null,
+                    "lokasi": "Jl. Mulawarman, Lamaru, Balikpapan Tim., Kota Balikpapan, Kalimantan Timur 76118",
+                    "telp": "+6281347201592",
+                    "url_web": "http://",
+                    "waktu": "08:00 - 17:30",
+                    "created_at": "2018-10-23 18:47:32",
+                    "updated_at": "2018-10-23 18:47:32",
+                    "kategori": {
+                        "id": 1,
+                        "nama": "Pantai",
+                        "created_at": "2018-10-23 18:46:03",
+                        "updated_at": "2018-10-23 18:46:03"
+                    }
+                }
+            ]
+        }
+    
+## List Kategori Pariwisata [GET /pariwisata/kategori]
+
++ Response 200 (application/json)
+        
+        {
+            "kategoris": [
+                {
+                    "id": 1,
+                    "nama": "Pantai",
+                    "created_at": "2018-10-23 18:46:03",
+                    "updated_at": "2018-10-23 18:46:03"
+                }
+            ]
+        }
+        
+## Detail Pariwisata [GET /pariwisata/{id}]
+
++ Response 200 (application/json)
+        
+        {
+            "pariwisata": {
+                "id": 10001,
+                "kategori_id": 1,
+                "nama": "Pantai Wisata Lamaru, Jl. Mulawarman, Lamaru, Kota Balikpapan, Kalimantan Timur",
+                "informasi": null,
+                "lokasi": "Jl. Mulawarman, Lamaru, Balikpapan Tim., Kota Balikpapan, Kalimantan Timur 76118",
+                "telp": "+6281347201592",
+                "url_web": "http://",
+                "waktu": "08:00 - 17:30",
+                "created_at": "2018-10-23 18:47:32",
+                "updated_at": "2018-10-23 18:47:32",
+                "kategori": {
+                    "id": 1,
+                    "nama": "Pantai",
+                    "created_at": "2018-10-23 18:46:03",
+                    "updated_at": "2018-10-23 18:46:03"
+                },
+                "map": {
+                    "id": 2,
+                    "data_id": "10001",
+                    "image": "/storage/map/VMJBxLlabYEOt3yomvhakkllcQxRkXJ9C3xCqpdj.png",
+                    "url": "https://www.google.co.id/maps/place/Pantai+Wisata+Lamaru/@-1.193233,117.0026993,17z/data=!3m1!4b1!4m5!3m4!1s0x2df15039a348564f:0xe4c83485b2c3167e!8m2!3d-1.193233!4d117.004888",
+                    "created_at": "2018-10-23 18:47:33",
+                    "updated_at": "2018-10-23 18:47:33"
+                },
+                "galeri": [
+                    {
+                        "id": 2,
+                        "data_id": 10001,
+                        "gambar": "/storage/galeri/7WASHFHj5MDvxkc9pikVwXjU4kwTZo8oLv9fAnBo.jpeg",
+                        "created_at": "2018-10-31 01:14:58",
+                        "updated_at": "2018-10-31 01:14:58"
+                    }
+                ]
+            }
+        }
+        
+# Group Perhotelan
+
+## List Perhotelan [GET /perhotelan]
+
++ Response 200 (application/json)       
+        
+        {
+            "perhotelans": [
+                {
+                    "id": 20001,
+                    "kategori_id": 1,
+                    "nama": "Aston Balikpapan Hotel & Residence",
+                    "lokasi": "Jl. Jend Sudirman No. 7 Grand Sudirman, Klandasan Ilir, Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76411",
+                    "telp": "+62542733999",
+                    "url_web": "https://aston-international.com",
+                    "waktu": "00:00 - 00:00",
+                    "created_at": "2018-10-23 19:02:48",
+                    "updated_at": "2018-10-23 19:41:51",
+                    "kategori": {
+                        "id": 1,
+                        "nama": "Hotel Bintang 5",
+                        "created_at": "2018-10-23 19:01:40",
+                        "updated_at": "2018-10-23 19:01:40"
+                    }
+                }
+            ]
+        }
